@@ -9,13 +9,13 @@ ports:
   - port: 5432
     onOpen: ignore
 
-# tasks:
-# - init: >
-#     bundle install &&
-#     yarn install &&
-#     rails db:create
-#   command: >
-#     rails server -b 0.0.0.0
+tasks:
+- init: >
+    bundle install &&
+    yarn install &&
+    rails db:create
+  command: >
+    ./bin/dev
 
 vscode:
   extensions:
