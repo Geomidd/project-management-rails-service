@@ -6,3 +6,5 @@ RUN _ruby_version=3.0.3 \
     && bash -lc "rvm reinstall ruby-${_ruby_version} && rvm use ruby-${_ruby_version} --default && gem install rails" \
     && printf "rvm_gems_path=/workspace/.rvm" > ~/.rvmrc \
     && printf '{ rvm use $(rvm current); } >/dev/null 2>&1\n' >> "$HOME/.bashrc.d/70-ruby"
+
+RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
