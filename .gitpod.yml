@@ -15,7 +15,7 @@ tasks:
     yarn install &&
     rails db:create
   command: >
-    ./bin/dev
+    RAILS_DEVELOPMENT_HOSTS=3000-$GITPOD_WORKSPACE_ID.ws-us30.gitpod.io ./bin/dev
 
 vscode:
   extensions:
